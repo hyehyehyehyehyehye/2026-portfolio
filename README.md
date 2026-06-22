@@ -38,3 +38,4 @@ detailImage: "assets/liftree-detail.jpg",
 이미지 파일은 `assets` 폴더에 넣습니다. `detailImage`를 작성하지 않으면 목록용 `image`가 상세 화면에도 자동으로 표시됩니다.
 >>>>>>> 673fdbc (포트폴리오 업로드)
 # 2026-portfolio
+# 2026-portfolio
