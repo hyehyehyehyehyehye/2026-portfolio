@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="기획, 디자인, 퍼블리싱을 넘나드는 디자이너 조소혜의 포트폴리오">
+  <title>Jo So Hye — Designer Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="logo" href="#top" aria-label="처음으로">JSH<span>®</span></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span>Menu</span>
+      <i></i>
+    </button>
+    <nav id="site-nav" class="site-nav" aria-label="주요 메뉴">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-kicker reveal">
+        <span>Designer</span>
+        <span>Seoul, Korea</span>
+      </div>
+      <h1 class="hero-title" aria-label="Jo So Hye Portfolio">
+        <span class="reveal">Port<span class="script">f</span>olio</span>
+      </h1>
+      <div class="hero-bottom reveal">
+        <p>기획부터 구현까지,<br>의도된 행동을 만드는 디지털 경험을 설계합니다.</p>
+        <a class="round-link" href="#work" aria-label="프로젝트 보기">
+          <span>View work</span>
+          <b>↘</b>
+        </a>
+      </div>
+      <div class="hero-year" aria-hidden="true">2026</div>
+    </section>
+
+    <section id="about" class="about section">
+      <div class="section-label reveal">
+        <span>01</span>
+        <span>About</span>
+      </div>
+      <div class="about-copy">
+        <p class="eyebrow reveal">Hello, I’m So Hye.</p>
+        <h2 class="reveal">정보와 흐름을 설계해,<br>더 나은 경험을 만듭니다.</h2>
+        <div class="about-body reveal">
+          <p>공간 컨설팅을 통해 사용자의 동선을 고민하며 커리어를 시작했고, 법률 플랫폼에서는 복잡한 정보를 직관적으로 구조화하는 인포그래픽 디자인을 담당했습니다.</p>
+          <p>이러한 경험을 바탕으로 현재는 웹 디자인과 퍼블리싱에 집중합니다. 디자인이 화면에 머물지 않고 실제 사용자에게 의도된 행동을 이끌어내도록, 기획부터 구현까지 유기적인 디지털 경험을 설계합니다.
+          </p>
+        </div>
+      </div>
+      <!-- <figure class="about-image reveal">
+        <img src="assets/about.jpg" alt="디자이너 조소혜 소개">
+      </figure> -->
+    </section>
+
+    <section id="work" class="work section">
+      <div class="section-label reveal">
+        <span>02</span>
+        <span>Selected work</span>
+      </div>
+      <div class="work-heading">
+        <h2 class="reveal">Design that starts<br><em>with understanding.</em></h2>
+        <!-- <p class="reveal">웹, 인포그래픽, 비주얼, 공간까지.<br>먼저 사용자의 이해와 행동을 봅니다.</p> -->
+      </div>
+
+      <div class="filters reveal" role="group" aria-label="프로젝트 분류">
+        <button class="filter is-active" type="button" data-filter="all">All <span>11</span></button>
+        <button class="filter" type="button" data-filter="web">Web <span>04</span></button>
+        <button class="filter" type="button" data-filter="information">Information <span>04</span></button>
+        <button class="filter" type="button" data-filter="visual">Visual <span>03</span></button>
+      </div>
+
+      <div id="project-grid" class="project-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="experience" class="experience section">
+      <div class="section-label reveal">
+        <span>03</span>
+        <span>Experience</span>
+      </div>
+      <div class="experience-intro">
+        <h2 class="reveal">From space<br>to <em>screen.</em></h2>
+        <p class="reveal">사용자가 어디에서 멈추고, 무엇을 이해하며, 다음에 어떻게 움직이는지 고민해 왔습니다.</p>
+      </div>
+      <div class="timeline reveal">
+        <article>
+          <time>2023.11 — 2026.03</time>
+          <h3>메디컬탑팀</h3>
+          <p>홈페이지팀 웹디자이너</p>
+        </article>
+        <article>
+          <time>2020.09 — 2023.03</time>
+          <h3>로앤컴퍼니</h3>
+          <p>로톡뉴스 그래픽디자이너</p>
+        </article>
+        <article>
+          <time>2019.09 — 2020.04</time>
+          <h3>공간다움</h3>
+          <p>시각·공간 디자이너</p>
+        </article>
+      </div>
+      <div class="skills reveal" aria-label="사용 기술">
+        <span>Figma</span><span>Photoshop</span><span>Illustrator</span><span>HTML</span>
+        <span>CSS</span><span>JavaScript</span><span>jQuery</span><span>GitHub</span>
+      </div>
+    </section>
+
+    <section id="contact" class="contact section">
+      <p class="eyebrow reveal">Have a project in mind?</p>
+      <a class="contact-title reveal" href="mailto:so_hye1@naver.com">
+        Let’s make<br><em>something clear.</em>
+        <span>↗</span>
+      </a>
+      <div class="contact-bottom reveal">
+        <p>새로운 프로젝트와 협업 제안을 기다립니다.</p>
+        <div>
+          <a href="mailto:so_hye1@naver.com">so_hye1@naver.com</a>
+          <a href="tel:+821059121999">010.5912.1999</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Jo So Hye</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+
+  <dialog class="project-modal" id="project-modal">
+    <button class="modal-close" type="button" aria-label="닫기">×</button>
+    <div class="modal-content"></div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>
