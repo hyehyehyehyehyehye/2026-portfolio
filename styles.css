@@ -556,6 +556,10 @@ footer {
     opacity 0.8s,
     transform 0.8s;
 }
+.reveal_M {
+  display: none;
+}
+
 .reveal.is-visible {
   opacity: 1;
   transform: none;
@@ -632,6 +636,12 @@ footer {
     height: 80px;
     justify-content: center;
     flex-direction: row;
+  }
+  .reveal_PC {
+    display: none;
+  }
+  .reveal_M {
+    display: block;
   }
   .section {
     padding-top: 90px;
