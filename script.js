@@ -6,7 +6,7 @@ const projects = [
     image: "assets/liftree.png",
     detailImage: "assets/liftree-detail.png",
     year: "2026",
-    role: "기획 · 디자인 · 퍼블리싱 100%",
+    role: "기획 · 디자인 · 퍼블리싱 90%",
     tools: "Figma, HTML, CSS, JavaScript",
     description:
       "병원의 전문성과 미적 철학을 효과적으로 전달해 브랜드 신뢰도를 강화하고, 프리미엄 고객층의 상담 전환을 유도하도록 설계했습니다. 시술 정보 중심의 구성을 넘어 병원의 철학, 의료진의 전문성, 미적 기준을 중심으로 콘텐츠를 재구성했습니다.",
