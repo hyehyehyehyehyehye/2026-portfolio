@@ -136,7 +136,38 @@ const projects = [
   },
 ];
 
+const aiProjects = [
+  {
+    title: "AI Practice 01",
+    category: "ai",
+    type: "AI Practice",
+    image: "assets/ai_practice3.jpg",
+    detailImage: "assets/ai_practice_detail.jpg",
+    year: "2026",
+    role: "AI 이미지 실험 · 비주얼 디렉션",
+    tools: "Nano Banana",
+    description:
+      "AI 툴을 활용해 이미지 콘셉트를 실험하고, 결과물을 포트폴리오용 비주얼로 정리한 작업입니다.",
+  },
+
+  {
+    title: "AI Practice 02",
+    category: "ai",
+    type: "AI Practice",
+    image: "assets/ai_practice2.jpg",
+    detailImage: "assets/ai_practice_detail2.jpg",
+    video: "assets/ai_practice.mp4",
+    videoPoster: "assets/ai_practice4.jpg",
+    year: "2026",
+    role: "AI 이미지 실험 · 비주얼 디렉션",
+    tools: "Nano Banana, firefly",
+    description:
+      "AI 툴을 활용해 이미지 콘셉트를 실험하고, 결과물을 포트폴리오용 비주얼로 정리한 작업입니다.",
+  },
+];
+
 const grid = document.querySelector("#project-grid");
+const aiGrid = document.querySelector("#Aiproject-grid");
 const modal = document.querySelector("#project-modal");
 const modalContent = modal.querySelector(".modal-content");
 const categoryNames = {
@@ -144,6 +175,7 @@ const categoryNames = {
   information: "Information Design",
   visual: "Visual Design",
   exhibition: "Exhibition Design",
+  ai: "AI Practice",
 };
 
 function renderProjects(filter = "all") {
@@ -166,8 +198,43 @@ function renderProjects(filter = "all") {
     .join("");
 }
 
-function openProject(index) {
-  const project = projects[index];
+function renderAiProjects() {
+  if (!aiGrid) return;
+
+  aiGrid.innerHTML = aiProjects
+    .map(
+      (project, index) => `
+    <article class="project-card"
+      data-ai-index="${index}" tabindex="0" role="button" aria-label="${project.title} 상세 보기">
+      <div class="project-image">
+        <img src="${project.image}" alt="${project.title} 프로젝트 이미지" loading="lazy">
+      </div>
+      <div class="project-meta">
+        <h3>${project.title}</h3>
+        <p>${project.type}</p>
+        <span>${String(index + 1).padStart(2, "0")}</span>
+      </div>
+    </article>
+  `,
+    )
+    .join("");
+}
+
+function getProjectMedia(project) {
+  if (project.video) {
+    return `
+      <img src="${project.detailImage || project.image}" alt="${project.title} 상세 이미지">
+      <video controls playsinline poster="${project.videoPoster || project.detailImage || project.image}" aria-label="${project.title} 상세 영상">
+        <source src="${project.video}" type="video/mp4">
+        이 브라우저에서는 영상을 재생할 수 없습니다.
+      </video>
+    `;
+  }
+
+  return `<img src="${project.detailImage || project.image}" alt="${project.title} 상세 이미지">`;
+}
+
+function openProject(project) {
   modalContent.innerHTML = `
     <div class="modal-text">
       <div>
@@ -183,13 +250,14 @@ function openProject(index) {
         ${project.link ? `<a class="modal-link" href="${project.link}" target="_blank" rel="noreferrer">Visit project ↗</a>` : ""}
       </div>
     </div>
-    <div class="modal-hero"><img src="${project.detailImage || project.image}" alt="${project.title} 상세 이미지"></div>
+    <div class="modal-hero">${getProjectMedia(project)}</div>
   `;
   modal.showModal();
   document.body.classList.add("modal-open");
 }
 
 renderProjects();
+renderAiProjects();
 
 document.querySelectorAll(".filter").forEach((button) => {
   button.addEventListener("click", () => {
@@ -201,17 +269,34 @@ document.querySelectorAll(".filter").forEach((button) => {
 
 grid.addEventListener("click", (event) => {
   const card = event.target.closest(".project-card");
-  if (card) openProject(Number(card.dataset.index));
+  if (card) openProject(projects[Number(card.dataset.index)]);
 });
 grid.addEventListener("keydown", (event) => {
   if (event.key === "Enter" || event.key === " ") {
     const card = event.target.closest(".project-card");
     if (card) {
       event.preventDefault();
-      openProject(Number(card.dataset.index));
+      openProject(projects[Number(card.dataset.index)]);
     }
   }
 });
+
+if (aiGrid) {
+  aiGrid.addEventListener("click", (event) => {
+    const card = event.target.closest(".project-card");
+    if (card) openProject(aiProjects[Number(card.dataset.aiIndex)]);
+  });
+
+  aiGrid.addEventListener("keydown", (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      const card = event.target.closest(".project-card");
+      if (card) {
+        event.preventDefault();
+        openProject(aiProjects[Number(card.dataset.aiIndex)]);
+      }
+    }
+  });
+}
 
 modal
   .querySelector(".modal-close")
