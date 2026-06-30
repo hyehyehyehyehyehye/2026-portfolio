@@ -26,6 +26,19 @@ const projects = [
     link: "https://madibareum.kr/",
   },
   {
+    title: "서울아산나성수내과의원",
+    category: "web",
+    type: "Web · Mobile Design",
+    image: "assets/rheumatism.png",
+    detailImage: "assets/rheumatism-detail.jpg",
+    year: "2026",
+    role: "기획 · 디자인 · 퍼블리싱 100%",
+    tools: "Figma, HTML, CSS, JavaScript",
+    description:
+      "류마티스 질환 전문성과 한양방 통합 진료의 강점을 명확히 전달하기 위해, 질환 이해부터 자가 체크, 검사, 치료 방향까지 이어지는 정보 흐름을 중심으로 설계했습니다. 대표원장의 임상 경험과 연구 이력, 정밀 검사 시스템, 비수술 통증 치료 항목을 함께 구성해 사용자가 진료의 필요성과 병원의 전문성을 자연스럽게 인식할 수 있도록 했습니다.",
+    link: "https://sarc.co.kr/",
+  },
+  {
     title: "MTT Mall",
     category: "web",
     type: "B2B Commerce",
