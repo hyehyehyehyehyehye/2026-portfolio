@@ -177,6 +177,21 @@ const aiProjects = [
     description:
       "AI 툴을 활용해 이미지 콘셉트를 실험하고, 결과물을 포트폴리오용 비주얼로 정리한 작업입니다.",
   },
+
+  {
+    title: "AI Practice 03",
+    category: "ai",
+    type: "AI Practice",
+    image: "assets/ai_practice5.jpg",
+    detailImage: "assets/ai_practice5_detail.jpg",
+    video: "assets/ai_practice.mp4",
+    videoPoster: "assets/ai_practice4.jpg",
+    year: "2026",
+    role: "AI 이미지 실험 · 비주얼 디렉션",
+    tools: "Chat GPT, firefly",
+    description:
+      "AI 툴을 활용해 이미지 콘셉트를 실험하고, 결과물을 포트폴리오용 비주얼로 정리한 작업입니다.",
+  },
 ];
 
 const grid = document.querySelector("#project-grid");
