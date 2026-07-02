@@ -184,8 +184,6 @@ const aiProjects = [
     type: "AI Practice",
     image: "assets/ai_practice5.jpg",
     detailImage: "assets/ai_practice5_detail.jpg",
-    video: "assets/ai_practice.mp4",
-    videoPoster: "assets/ai_practice4.jpg",
     year: "2026",
     role: "AI 이미지 실험 · 비주얼 디렉션",
     tools: "Chat GPT, firefly",
