@@ -190,6 +190,21 @@ const aiProjects = [
     description:
       "AI 툴을 활용해 이미지 콘셉트를 실험하고, 결과물을 포트폴리오용 비주얼로 정리한 작업입니다.",
   },
+
+  {
+    title: "AI Practice 04",
+    category: "ai",
+    type: "AI Practice",
+    image: "assets/ai_practice6.png",
+    detailImage: "assets/ai_practice6_detail.jpg",
+    video: "assets/ai_practice2.mp4",
+    videoPoster: "assets/ai_practice2_th.jpg",
+    year: "2026",
+    role: "AI 이미지 실험 · 비주얼 디렉션",
+    tools: "Chat GPT, google flow, Nano Banana",
+    description:
+      "AI 툴을 활용해 이미지 콘셉트를 실험하고, 결과물을 포트폴리오용 비주얼로 정리한 작업입니다.",
+  },
 ];
 
 const grid = document.querySelector("#project-grid");
